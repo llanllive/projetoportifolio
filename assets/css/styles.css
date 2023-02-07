@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
+
+body {
+    margin: 0;
+    font-family:'Poppins', Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 120px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+header .menu {
+    width: 20px;
+    height: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header .menu .bar {
+    height: 2px;
+    background-color: #000;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.container .left-side {
+    flex:1;
+    display: flex;
+    align-items: center;
+    background-color: #38576d;
+    
+}
+
+.container .left-side .info {
+    padding-left: 120px;
+    color: #fff;
+}
+.container .left-side .profession {
+ font-size: 16px;
+ font-weight: 700;
+ color: #d5c455;
+
+}
+
+.container .left-side .name {
+    font-size: 80px;
+    font-weight:900;
+    line-height: 100px;
+    margin-bottom: 20px;
+}
+
+
+
+.container .right-side {
+    flex:1;
+    background-image: url(../images/hero.jpg);
+    background-size: cover;
+    
+}
+
+.container .buttons a {
+    display: inline-block;
+    background-color: #fff;
+    padding: 16px 24px;
+    border-radius: 2px;
+    color: #38576d;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    box-shadow: 0px 0px 10px #111;
+}
+
+.container .buttons a.btn-yellow  {
+    background-color: #d5c455;
+}
+
+.container .buttons a:hover {
+    opacity: 0.8;
+}
+footer {
+    font-size: 13px;
+    padding-left: 120px;
+    padding-bottom: 40px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom:0;
+    color: #bbb;
+}
+
+footer a {
+    color: #bbb;
+    text-decoration: none;
+}
+
+@media (min-width:700px) and (max-width:768px) {
+    header {
+        padding: 20px 70px;
+    }
+
+    .container .left-side .info,
+    footer {
+        padding-left: 70px;
+    }
+}
+
+@media (max-width:699px) {
+
+    header {
+        position: initial;
+        background-color: #111;
+        padding: 20px;
+    }
+
+    header .menu .bar {
+        background-color: #fff;
+    }
+    
+    .container {
+        flex-direction: column;
+    }
+
+    .container .left-side {
+        flex:none;
+        padding: 30px 20px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .container .left-side .info {
+        padding:0px;
+        
+    }
+
+    .container .left-side .info .name {
+        font-size: 70px;
+    }
+
+    footer {
+        position: initial;
+        background-color: #111;
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width:541px) {
+    .container .left-side .info .name {
+            font-size: 39px;
+        }
+    }
